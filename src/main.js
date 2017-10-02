@@ -3,7 +3,7 @@ var Extractor
 function Main (token) {
   Extractor = new ext(token)
 
-  this.defaultCallback = function (data) {console.log(data)}
+  this.defaultCallback = function (error, data) {console.error(error); console.log(data)}
 }
 
 Main.prototype.get = function (proto, options, callback) {
